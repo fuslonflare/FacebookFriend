@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FacebookFriend</string>
+    <string name="logout">LogOut</string>
+    <string name="facebook_app_id">1794834547403019</string>
+    <string name="image_description">friend_picture</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="jump_to">Jump to</string>
+</resources>

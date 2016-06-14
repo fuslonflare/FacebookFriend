@@ -63,7 +63,13 @@ public class FriendList extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        BufferList bufferList = new BufferList(getApplicationContext(), friends/*, pic_friend*/);
+        for (String name : friends) {
+            Log.d(MainActivity.TAG, "FriendName = " + name);
+        }
+
+        BufferList bufferList = new BufferList(getApplicationContext(), friends, pic_friend);
+
+
 
         listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(bufferList);
