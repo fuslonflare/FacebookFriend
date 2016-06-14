@@ -53,17 +53,7 @@ public class BufferList extends BaseAdapter {
         textView.setText(friendName[position]);
 
         ImageView imageView = (ImageView) convertView.findViewById(R.id.picLabel);
-        Picasso.with(context).load(friendPic[position]).into(imageView, new Callback() {
-            @Override
-            public void onSuccess() {
-                Log.i(MainActivity.TAG, "Success to load image from Picasso");
-            }
-
-            @Override
-            public void onError() {
-                Log.e(MainActivity.TAG, "Error to load image from Picasso");
-            }
-        });
+        Picasso.with(context).load(friendPic[position]).into(imageView);
 
         return convertView;
     }
