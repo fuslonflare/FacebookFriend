@@ -16,6 +16,7 @@ import com.facebook.HttpMethod;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.facebook.share.widget.ShareButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,8 +31,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         initFacebook();
         setContentView(R.layout.activity_main);
+        ShareButton shareButton = (ShareButton) findViewById(R.id.shareButton);
+        shareButton.setEnabled(true);
         LoginButton loginButton = (LoginButton) findViewById(R.id.btn_fbLogin);
-        loginButton.setReadPermissions("user_friends");
+        if (loginButton != null) {
+            loginButton.setReadPermissions("user_friends");
+        }
         getLoginDetails(loginButton);
     }
 
